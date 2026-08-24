@@ -20,7 +20,7 @@ async function connectMongoDB() {
       serverSelectionTimeoutMS: 3000 // 3 sec timeout for quick fallback
     });
     isMongoConnected = true;
-    console.log(`[MongoDB] Connected successfully to MongoDB at ${MONGODB_URI}`);
+    console.log('[MongoDB] Connected successfully to MongoDB.');
     await seedMongoDB();
   } catch (err) {
     isMongoConnected = false;
