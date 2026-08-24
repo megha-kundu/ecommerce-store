@@ -35,25 +35,12 @@ app.get('/api/health', (req, res) => {
   });
 });
 
-// Root endpoint redirect / summary
-app.get('/', (req, res) => {
-  res.send(`
-    <html>
-      <head><title>Nexus E-Commerce API</title></head>
-      <body style="font-family: system-ui, sans-serif; padding: 2rem; background: #0f172a; color: #f8fafc;">
-        <h1>⚡ Nexus E-Commerce REST API Server</h1>
-        <p>Server is running smoothly on port <code>${PORT}</code>.</p>
-        <h2>Available API Endpoints:</h2>
-        <ul>
-          <li><a href="/api/products" style="color:#38bdf8;">GET /api/products</a> - Store Catalog & Search</li>
-          <li><a href="/api/orders" style="color:#38bdf8;">GET /api/orders</a> - Customer Orders</li>
-          <li><a href="/api/categories" style="color:#38bdf8;">GET /api/categories</a> - Product Categories</li>
-          <li><a href="/api/admin/stats" style="color:#38bdf8;">GET /api/admin/stats</a> - Admin Analytics</li>
-          <li><a href="/api/health" style="color:#38bdf8;">GET /api/health</a> - API Health Status</li>
-        </ul>
-      </body>
-    </html>
-  `);
+const clientDistPath = path.join(__dirname, '../client/dist');
+app.use(express.static(clientDistPath));
+
+app.get('*', (req, res, next) => {
+  if (req.path.startsWith('/api/')) return next();
+  res.sendFile(path.join(clientDistPath, 'index.html'));
 });
 
 // Start Express Server
