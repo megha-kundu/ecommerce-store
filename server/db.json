@@ -1,0 +1,290 @@
+{
+  "categories": [
+    {
+      "id": "cat-all",
+      "name": "All Products",
+      "slug": "all",
+      "icon": "Grid"
+    },
+    {
+      "id": "cat-audio",
+      "name": "Audio & Sound",
+      "slug": "audio",
+      "icon": "Headphones"
+    },
+    {
+      "id": "cat-laptops",
+      "name": "Laptops & Computers",
+      "slug": "laptops",
+      "icon": "Laptop"
+    },
+    {
+      "id": "cat-wearables",
+      "name": "Smartwatches & Wearables",
+      "slug": "wearables",
+      "icon": "Watch"
+    },
+    {
+      "id": "cat-gaming",
+      "name": "Gaming Gear",
+      "slug": "gaming",
+      "icon": "Gamepad2"
+    },
+    {
+      "id": "cat-accessories",
+      "name": "Accessories",
+      "slug": "accessories",
+      "icon": "Smartphone"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod-1",
+      "name": "Nexus SoundPro X Ultra Wireless Headphones",
+      "category": "audio",
+      "price": 249.99,
+      "originalPrice": 329.99,
+      "description": "Industry-leading active noise cancelling overhead headphones with 40-hour battery life, spatial audio, dynamic drivers, and ultra-soft memory foam ear cushions.",
+      "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80",
+      "stock": 17,
+      "rating": 4.9,
+      "reviewsCount": 142,
+      "featured": true,
+      "tags": [
+        "ANC",
+        "Bluetooth 5.3",
+        "Spatial Audio"
+      ]
+    },
+    {
+      "id": "prod-2",
+      "name": "AeroBook Pro 16 M3 Max Studio Edition",
+      "category": "laptops",
+      "price": 1899,
+      "originalPrice": 2099,
+      "description": "Ultra-thin aluminum workstation laptop equipped with 16-core CPU, 40-core GPU, 36GB unified RAM, and Liquid Retina XDR 120Hz Display for pro creators.",
+      "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80",
+      "stock": 7,
+      "rating": 4.95,
+      "reviewsCount": 89,
+      "featured": true,
+      "tags": [
+        "Creator",
+        "120Hz",
+        "36GB RAM"
+      ]
+    },
+    {
+      "id": "prod-3",
+      "name": "PulseFit Horizon OLED Smartwatch",
+      "category": "wearables",
+      "price": 199.5,
+      "originalPrice": 249,
+      "description": "Advanced fitness tracker with continuous heart rate monitoring, ECG readout, sleep analysis, GPS tracking, and a vibrant sapphire crystal AMOLED display.",
+      "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80",
+      "stock": 24,
+      "rating": 4.7,
+      "reviewsCount": 210,
+      "featured": true,
+      "tags": [
+        "Fitness",
+        "ECG",
+        "AMOLED"
+      ]
+    },
+    {
+      "id": "prod-4",
+      "name": "ViperStrike RGB Mechanical Gaming Keyboard",
+      "category": "gaming",
+      "price": 129.99,
+      "originalPrice": 159.99,
+      "description": "Hot-swappable tactile mechanical gaming keyboard featuring per-key RGB lighting, PBT double-shot keycaps, aircraft-grade aluminum chassis, and ultra-fast 8000Hz polling rate.",
+      "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?auto=format&fit=crop&w=800&q=80",
+      "stock": 14,
+      "rating": 4.8,
+      "reviewsCount": 76,
+      "featured": false,
+      "tags": [
+        "Hot-Swap",
+        "RGB",
+        "8KHz"
+      ]
+    },
+    {
+      "id": "prod-5",
+      "name": "Apex Precision Wireless Ergonomic Mouse",
+      "category": "accessories",
+      "price": 79.99,
+      "originalPrice": 99.99,
+      "description": "Ergonomically sculpted wireless mouse with hyper-fast MagSpeed scrolling, 8K DPI sensor for glass surface tracking, and quiet click technology.",
+      "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?auto=format&fit=crop&w=800&q=80",
+      "stock": 30,
+      "rating": 4.6,
+      "reviewsCount": 115,
+      "featured": false,
+      "tags": [
+        "Ergonomic",
+        "8K DPI",
+        "Silent"
+      ]
+    },
+    {
+      "id": "prod-6",
+      "name": "AcousticStudio Hi-Fi Desktop Speaker Duo",
+      "category": "audio",
+      "price": 299,
+      "originalPrice": 349,
+      "description": "Premium bookshelf studio monitors with silk dome tweeters, woven carbon fiber woofers, Bluetooth 5.0 wireless aptX, and optical digital inputs.",
+      "image": "https://images.unsplash.com/photo-1545454675-3531b543be5d?auto=format&fit=crop&w=800&q=80",
+      "stock": 10,
+      "rating": 4.85,
+      "reviewsCount": 54,
+      "featured": true,
+      "tags": [
+        "Hi-Fi",
+        "Studio",
+        "Bluetooth"
+      ]
+    },
+    {
+      "id": "prod-7",
+      "name": "CyberDeck Ultra 4K Curved OLED Monitor 34\"",
+      "category": "gaming",
+      "price": 899.99,
+      "originalPrice": 1099.99,
+      "description": "Ultrawide 34-inch curved OLED gaming monitor featuring 240Hz refresh rate, 0.03ms response time, G-Sync compatibility, and HDR True Black 400.",
+      "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?auto=format&fit=crop&w=800&q=80",
+      "stock": 5,
+      "rating": 4.92,
+      "reviewsCount": 43,
+      "featured": true,
+      "tags": [
+        "240Hz",
+        "OLED",
+        "HDR400"
+      ]
+    },
+    {
+      "id": "prod-8",
+      "name": "MagCharge 3-in-1 Fast Wireless Station",
+      "category": "accessories",
+      "price": 64.99,
+      "originalPrice": 79.99,
+      "description": "Foldable aluminum travel stand that wirelessly fast-charges your smartphone, smartwatch, and wireless earbuds simultaneously using magnetic alignment.",
+      "image": "https://images.unsplash.com/photo-1616348436168-de43ad0db179?auto=format&fit=crop&w=800&q=80",
+      "stock": 40,
+      "rating": 4.5,
+      "reviewsCount": 168,
+      "featured": false,
+      "tags": [
+        "MagSafe",
+        "15W",
+        "3-in-1"
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "id": "NX-71758",
+      "customer": {
+        "name": "Jane Doe",
+        "email": "jane.doe@example.com",
+        "address": "452 Technology Parkway, Silicon Valley, CA",
+        "phone": "+1 (555) 321-7890"
+      },
+      "items": [
+        {
+          "id": "prod-1",
+          "name": "Nexus SoundPro X Ultra Wireless Headphones",
+          "price": 249.99,
+          "quantity": 1
+        },
+        {
+          "id": "prod-3",
+          "name": "PulseFit Horizon OLED Smartwatch",
+          "price": 199.5,
+          "quantity": 1
+        }
+      ],
+      "pricing": {
+        "subtotal": 449.49,
+        "discount": 0,
+        "shipping": 0,
+        "tax": 35.9592,
+        "total": 485.4492
+      },
+      "payment": {
+        "method": "PayPal",
+        "status": "Paid"
+      },
+      "status": "Pending",
+      "createdAt": "2026-08-16T05:13:58.790Z"
+    },
+    {
+      "id": "NX-89412",
+      "customer": {
+        "name": "Sarah Jenkins",
+        "email": "sarah.j@example.com",
+        "address": "742 Evergreen Terrace, Springfield",
+        "phone": "+1 (555) 234-5678"
+      },
+      "items": [
+        {
+          "id": "prod-1",
+          "name": "Nexus SoundPro X Ultra Wireless Headphones",
+          "price": 249.99,
+          "quantity": 1
+        }
+      ],
+      "pricing": {
+        "subtotal": 249.99,
+        "tax": 20,
+        "shipping": 0,
+        "discount": 25,
+        "total": 244.99
+      },
+      "payment": {
+        "method": "Credit Card",
+        "status": "Paid"
+      },
+      "status": "Delivered",
+      "createdAt": "2026-08-14T04:39:37.829Z"
+    },
+    {
+      "id": "NX-89413",
+      "customer": {
+        "name": "Marcus Vance",
+        "email": "marcus.vance@example.com",
+        "address": "10880 Wilshire Blvd, Los Angeles, CA",
+        "phone": "+1 (555) 987-6543"
+      },
+      "items": [
+        {
+          "id": "prod-3",
+          "name": "PulseFit Horizon OLED Smartwatch",
+          "price": 199.5,
+          "quantity": 1
+        },
+        {
+          "id": "prod-8",
+          "name": "MagCharge 3-in-1 Fast Wireless Station",
+          "price": 64.99,
+          "quantity": 1
+        }
+      ],
+      "pricing": {
+        "subtotal": 264.49,
+        "tax": 21.16,
+        "shipping": 0,
+        "discount": 0,
+        "total": 285.65
+      },
+      "payment": {
+        "method": "PayPal",
+        "status": "Paid"
+      },
+      "status": "Processing",
+      "createdAt": "2026-08-15T23:39:37.831Z"
+    }
+  ]
+}

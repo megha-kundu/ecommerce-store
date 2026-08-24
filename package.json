@@ -1,0 +1,31 @@
+{
+  "name": "nexus-ecommerce-store",
+  "version": "1.0.0",
+  "description": "Full-Stack E-Commerce Platform with Express REST API Backend, Database, React Frontend, and Admin Dashboard",
+  "main": "server/server.js",
+  "scripts": {
+    "setup": "npm run install:server && npm run install:client",
+    "install:server": "cd server && npm install",
+    "install:client": "cd client && npm install",
+    "server": "cd server && node server.js",
+    "client": "cd client && npm run dev",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd client && npm run build"
+  },
+  "keywords": [
+    "ecommerce",
+    "fullstack",
+    "express",
+    "react",
+    "vite",
+    "sqlite",
+    "rest-api",
+    "admin-dashboard",
+    "resume-project"
+  ],
+  "author": "Fullstack Developer",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
