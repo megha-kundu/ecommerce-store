@@ -10,7 +10,7 @@
 
 ## 🌐 Live Demo
 
-🔗 **[Visit NexusTech Live](https://nexustech-demo.netlify.app/)**
+🔗 **[Visit NexusTech Live](https://ecommerce-store-h1ra.onrender.com)**
 
 ---
 
