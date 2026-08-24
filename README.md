@@ -6,9 +6,13 @@ A production-ready, feature-rich **Full-Stack E-Commerce Web Application** built
 
 ---
 
-## 🚀 Resume Summary & Project Highlights
+## 🌐 Live Demo
 
-Use these bullet points directly in your resume under **Projects**:
+🔗 **[Visit NexusTech Live](https://nexustech-demo.netlify.app/)**
+
+---
+
+## 🚀 Project Highlights
 
 - **Full-Stack Architecture**: Engineered a responsive e-commerce web application with a modular **Node.js/Express** REST API backend and an interactive **React + Vite** frontend.
 - **RESTful API & Database Integration**: Architected 10+ REST API endpoints with robust CRUD operations, server-side search/filtering/pagination, and persistent JSON/SQLite database storage.
@@ -99,36 +103,34 @@ Use these bullet points directly in your resume under **Projects**:
 
 ---
 
-## ⚡ Quick Start Guide
+## ✨ Core User Experience
 
-### Prerequisites
-- Node.js (v16.0 or higher installed)
-
-### 1. Installation
-Run the following command in the root folder to install dependencies for both server and client:
-```bash
-npm run setup
-```
-*Or install individually:*
-```bash
-cd server && npm install
-cd ../client && npm install
-```
-
-### 2. Running Locally
-To launch both the Node.js REST API server (Port `5000`) and the Vite React frontend (Port `3000` / `5173`) simultaneously:
-```bash
-npm run dev
-```
-
-Open your browser and navigate to:
-- **Frontend App**: `http://localhost:5173` (or `http://localhost:3000`)
-- **Backend REST API**: `http://localhost:5000/api/products`
+* 🛍️ **Product Discovery** — Browse, search, filter, sort, and explore featured products with real-time stock availability.
+* 🛒 **Smart Shopping Cart** — Manage quantities with instant subtotal, discount, tax, shipping, and total calculations.
+* 💳 **Interactive Checkout** — Complete customer and shipping details, select a payment method, and place orders through the REST API.
+* 📦 **Order & Inventory Flow** — Orders receive unique tracking IDs and automatically update product inventory.
+* 📊 **Admin Operations** — Monitor store performance, manage products and inventory, and update order delivery statuses.
+* 📱 **Responsive Experience** — Modern Glassmorphism interface designed for desktop, tablet, and mobile screens.
 
 ---
 
-## 💡 How to Add to Your Portfolio / VS Code
+---
 
-1. Copy the entire `ecommerce-store` directory to your preferred projects folder or GitHub workspace.
-2. Open the folder in **VS Code**: `File -> Open Folder -> ecommerce-store`.
-3. Push to GitHub to highlight your full-stack expertise!
+## 🌟 Project Status
+
+🚧 **Actively Developed & Continuously Improved**
+
+💡 Built as a practical full-stack project to strengthen real-world development skills.
+
+📌 **Current Focus:** Clean architecture • Better UX • Scalable features • Continuous learning
+
+---
+
+<p align="center">
+  💙 <strong>Built with curiosity, consistency, and a passion for web development.</strong>
+</p>
+
+<p align="center">
+  ⭐ <strong>Thanks for visiting NexusTech!</strong>
+</p>
+
