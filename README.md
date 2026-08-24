@@ -1,8 +1,10 @@
 # NexusTech — Full-Stack E-Commerce Platform
 
-A production-ready, feature-rich **Full-Stack E-Commerce Web Application** built with Node.js, Express REST API backend, persistent database storage, modern React (Vite) frontend, interactive checkout pipeline, and a full Admin Operations Dashboard.
-
-![NexusTech Store Header](https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=1200&q=80)
+> ✦ **A production-ready, feature-rich Full-Stack E-Commerce Web Application** ✦
+>
+> ⚡ built with **Node.js, Express REST API backend, persistent database storage, modern React (Vite) frontend, interactive checkout pipeline, and a full Admin Operations Dashboard.** 🚀
+>
+> **`Build. Explore. Experience.`** ✨
 
 ---
 
