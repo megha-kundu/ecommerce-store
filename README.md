@@ -13,6 +13,8 @@
 🔗 **[Visit NexusTech Live](https://ecommerce-store-h1ra.onrender.com)**
 
 ---
+Note: The live site is hosted on a free tier. It may take up to 60 seconds to load initially while the server wakes up. Thank you for your patience!
+
 
 ## 🚀 Project Highlights
 
