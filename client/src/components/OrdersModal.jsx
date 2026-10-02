@@ -33,7 +33,7 @@ export default function OrdersModal() {
   return (
     <div className="modal-overlay" onClick={() => setIsOrdersOpen(false)}>
       <div 
-        className="glass-card" 
+        className="glass-card responsive-modal responsive-modal-padded"
         onClick={(e) => e.stopPropagation()}
         style={{
           width: '100%',

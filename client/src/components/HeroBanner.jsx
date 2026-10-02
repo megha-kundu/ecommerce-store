@@ -10,7 +10,7 @@ export default function HeroBanner() {
   return (
     <div style={{ marginBottom: '3rem' }}>
       {/* Luxury Flagship Hero Section */}
-      <div className="glass-card" style={{
+      <div className="glass-card responsive-hero" style={{
         padding: '3.5rem 2.5rem',
         marginBottom: '2rem',
         position: 'relative',
@@ -33,7 +33,7 @@ export default function HeroBanner() {
           pointerEvents: 'none'
         }} />
 
-        <div style={{
+        <div className="responsive-hero-layout" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
           gap: '2.5rem',
@@ -133,7 +133,7 @@ export default function HeroBanner() {
       </div>
 
       {/* Commercial Trust Badges Row */}
-      <div style={{
+      <div className="responsive-trust-grid" style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
         gap: '1rem'

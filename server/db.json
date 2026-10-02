@@ -64,7 +64,7 @@
       "originalPrice": 2099,
       "description": "Ultra-thin aluminum workstation laptop equipped with 16-core CPU, 40-core GPU, 36GB unified RAM, and Liquid Retina XDR 120Hz Display for pro creators.",
       "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8?auto=format&fit=crop&w=800&q=80",
-      "stock": 7,
+      "stock": 6,
       "rating": 4.95,
       "reviewsCount": 89,
       "featured": true,
@@ -184,6 +184,38 @@
     }
   ],
   "orders": [
+    {
+      "id": "NX-48056",
+      "customer": {
+        "name": "Jane Doe",
+        "email": "jane.doe@example.com",
+        "address": "452 Technology Parkway, Silicon Valley, CA",
+        "phone": "+1 (555) 321-7890"
+      },
+      "items": [
+        {
+          "id": "prod-2",
+          "name": "AeroBook Pro 16 M3 Max Studio Edition",
+          "price": 1899,
+          "quantity": 1
+        }
+      ],
+      "pricing": {
+        "subtotal": 1899,
+        "discount": 0,
+        "shipping": 0,
+        "tax": 151.92000000000002,
+        "total": 2050.92
+      },
+      "payment": {
+        "method": "Razorpay",
+        "status": "Paid",
+        "razorpayOrderId": "order_Tj34lZCjuYHwAX",
+        "razorpayPaymentId": "pay_Tj3510BcPb69Kv"
+      },
+      "status": "Pending",
+      "createdAt": "2026-10-02T13:01:37.447Z"
+    },
     {
       "id": "NX-71758",
       "customer": {

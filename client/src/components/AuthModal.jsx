@@ -32,7 +32,7 @@ export default function AuthModal() {
   return (
     <div className="modal-overlay" onClick={() => setIsAuthOpen(false)}>
       <div 
-        className="glass-card" 
+        className="glass-card responsive-modal responsive-modal-padded"
         onClick={(e) => e.stopPropagation()}
         style={{
           width: '100%',

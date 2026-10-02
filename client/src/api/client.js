@@ -54,6 +54,11 @@ export const api = {
     body: JSON.stringify(orderPayload)
   }),
 
+  verifyPayment: (paymentData) => fetchJson('/payment/verify', {
+    method: 'POST',
+    body: JSON.stringify(paymentData)
+  }),
+
   getOrders: () => fetchJson('/orders'),
 
   updateOrderStatus: (id, status) => fetchJson(`/orders/${id}/status`, {

@@ -26,7 +26,7 @@ export default function Footer() {
     }}>
       <div style={{ maxWidth: '1280px', margin: '0 auto' }}>
         {/* Newsletter Banner */}
-        <div className="glass-card" style={{
+        <div className="glass-card footer-newsletter" style={{
           padding: '2.5rem 2rem',
           marginBottom: '3.5rem',
           background: 'linear-gradient(135deg, rgba(30, 41, 59, 0.6) 0%, rgba(15, 23, 42, 0.8) 100%)',
@@ -44,7 +44,7 @@ export default function Footer() {
             </p>
           </div>
 
-          <form onSubmit={handleSubscribe} style={{ display: 'flex', gap: '0.5rem' }}>
+          <form className="footer-subscribe" onSubmit={handleSubscribe} style={{ display: 'flex', gap: '0.5rem' }}>
             {subscribed ? (
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--success)', fontWeight: 600, fontSize: '0.95rem' }}>
                 <Check size={20} />

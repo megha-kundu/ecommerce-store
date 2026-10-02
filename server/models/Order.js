@@ -23,7 +23,9 @@ const orderSchema = new mongoose.Schema({
   },
   payment: {
     method: { type: String, default: "Credit Card" },
-    status: { type: String, default: "Paid" }
+    status: { type: String, default: "Pending" },
+    razorpayOrderId: { type: String },
+    razorpayPaymentId: { type: String }
   },
   status: { type: String, default: "Pending" },
   createdAt: { type: String, default: () => new Date().toISOString() }

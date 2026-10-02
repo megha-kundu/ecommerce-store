@@ -20,7 +20,7 @@ export default function ProductGrid() {
   return (
     <section id="catalog" style={{ marginBottom: '3rem' }}>
       {/* Category Pills & Controls Header */}
-      <div style={{
+      <div className="catalog-controls" style={{
         display: 'flex',
         flexWrap: 'wrap',
         alignItems: 'center',
@@ -29,7 +29,7 @@ export default function ProductGrid() {
         marginBottom: '1.5rem'
       }}>
         {/* Category Tabs */}
-        <div style={{
+        <div className="catalog-categories" style={{
           display: 'flex',
           gap: '0.5rem',
           overflowX: 'auto',
@@ -61,7 +61,7 @@ export default function ProductGrid() {
         </div>
 
         {/* Sort Selector & Refresh */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+        <div className="catalog-sort" style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
             <SlidersHorizontal size={16} style={{ color: 'var(--text-muted)' }} />
             <select
@@ -108,7 +108,7 @@ export default function ProductGrid() {
 
       {/* Loading Skeleton */}
       {loading ? (
-        <div style={{
+        <div className="product-cards-grid" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fill, minmax(270px, 1fr))',
           gap: '1.5rem'
@@ -136,7 +136,7 @@ export default function ProductGrid() {
         </div>
       ) : (
         /* Products Grid */
-        <div style={{
+        <div className="product-cards-grid" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fill, minmax(270px, 1fr))',
           gap: '1.5rem'

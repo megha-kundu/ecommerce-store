@@ -1,3 +1,4 @@
+require('dotenv').config({ path: '../.env' });
 const express = require('express');
 const cors = require('cors');
 const path = require('path');
@@ -6,6 +7,7 @@ const db = require('./db');
 const productsRouter = require('./routes/products');
 const ordersRouter = require('./routes/orders');
 const adminRouter = require('./routes/admin');
+const paymentRouter = require('./routes/payment');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -24,6 +26,7 @@ app.use((req, res, next) => {
 app.use('/api/products', productsRouter);
 app.use('/api/orders', ordersRouter);
 app.use('/api', adminRouter);
+app.use('/api/payment', paymentRouter);
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {

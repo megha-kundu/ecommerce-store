@@ -52,7 +52,7 @@ export default function VideoModal() {
   return (
     <div className="modal-overlay" onClick={() => setIsVideoOpen(false)}>
       <div 
-        className="glass-card" 
+        className="glass-card responsive-modal"
         onClick={(e) => e.stopPropagation()}
         style={{
           width: '100%',
@@ -66,7 +66,7 @@ export default function VideoModal() {
         }}
       >
         {/* Header bar */}
-        <div style={{
+        <div className="video-player" style={{
           padding: '1rem 1.5rem',
           background: 'rgba(15, 23, 42, 0.95)',
           borderBottom: '1px solid var(--border-subtle)',

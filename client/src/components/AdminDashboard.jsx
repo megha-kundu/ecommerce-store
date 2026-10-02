@@ -113,7 +113,7 @@ export default function AdminDashboard() {
   return (
     <div style={{ marginBottom: '3rem' }}>
       {/* Header Banner */}
-      <div className="glass-card" style={{
+      <div className="glass-card admin-dashboard-header" style={{
         padding: '1.75rem 2rem',
         marginBottom: '2rem',
         display: 'flex',
@@ -136,7 +136,7 @@ export default function AdminDashboard() {
       </div>
 
       {/* KPI Stats Cards */}
-      <div style={{
+      <div className="admin-stats-grid" style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
         gap: '1.25rem',
@@ -178,7 +178,7 @@ export default function AdminDashboard() {
       </div>
 
       {/* Admin Tab Switcher */}
-      <div style={{ display: 'flex', gap: '1rem', marginBottom: '1.5rem', borderBottom: '1px solid var(--border-subtle)', paddingBottom: '0.5rem' }}>
+      <div className="admin-tabs" style={{ display: 'flex', gap: '1rem', marginBottom: '1.5rem', borderBottom: '1px solid var(--border-subtle)', paddingBottom: '0.5rem' }}>
         <button
           onClick={() => setActiveTab('products')}
           style={{
@@ -210,7 +210,7 @@ export default function AdminDashboard() {
 
       {/* TAB 1: PRODUCT INVENTORY & ADD FORM */}
       {activeTab === 'products' && (
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
+        <div className="admin-inventory-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '2rem' }}>
           {/* Add Product Form */}
           <div className="glass-card" style={{ padding: '1.5rem', height: 'fit-content' }}>
             <h3 style={{ fontSize: '1.1rem', marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>

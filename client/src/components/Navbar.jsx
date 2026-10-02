@@ -36,7 +36,7 @@ export default function Navbar() {
   return (
     <>
       {/* Top Promotional Announcement Banner */}
-      <div style={{
+      <div className="promo-banner" style={{
         background: 'linear-gradient(90deg, #0284c7 0%, #6366f1 100%)',
         color: '#ffffff',
         padding: '0.45rem 1rem',
@@ -53,7 +53,7 @@ export default function Navbar() {
       </div>
 
       {/* Main Header */}
-      <header className="glass-card" style={{
+      <header className="glass-card responsive-header" style={{
         position: 'sticky',
         top: 0,
         zIndex: 50,
@@ -64,7 +64,7 @@ export default function Navbar() {
         padding: '0.9rem 1.5rem',
         background: 'rgba(9, 13, 22, 0.9)'
       }}>
-        <div style={{
+        <div className="responsive-header-inner" style={{
           maxWidth: '1280px',
           margin: '0 auto',
           display: 'flex',
@@ -102,7 +102,7 @@ export default function Navbar() {
           </div>
 
           {/* Navigation Links */}
-          <nav style={{
+          <nav className="responsive-nav" style={{
             display: 'flex',
             alignItems: 'center',
             gap: '1.25rem',
@@ -131,9 +131,9 @@ export default function Navbar() {
           </nav>
 
           {/* Search & Utility Icons */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+          <div className="header-tools" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
             {/* Search Input */}
-            <div style={{ position: 'relative', width: '220px' }}>
+            <div className="header-search" style={{ position: 'relative', width: '220px' }}>
               <Search size={16} style={{
                 position: 'absolute',
                 left: '12px',

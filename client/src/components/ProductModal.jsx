@@ -20,7 +20,7 @@ export default function ProductModal() {
   return (
     <div className="modal-overlay" onClick={() => setSelectedProduct(null)}>
       <div 
-        className="glass-card" 
+        className="glass-card responsive-modal"
         onClick={(e) => e.stopPropagation()}
         style={{
           width: '100%',
@@ -55,7 +55,7 @@ export default function ProductModal() {
           <X size={20} />
         </button>
 
-        <div style={{
+        <div className="responsive-product-details" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
         }}>

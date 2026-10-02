@@ -26,7 +26,7 @@ export default function OrderConfirmationModal() {
   return (
     <div className="modal-overlay" onClick={() => setCompletedOrder(null)}>
       <div 
-        className="glass-card" 
+        className="glass-card responsive-modal responsive-modal-padded"
         onClick={(e) => e.stopPropagation()}
         style={{
           width: '100%',

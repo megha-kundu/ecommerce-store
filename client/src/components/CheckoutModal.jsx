@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { X, CheckCircle, CreditCard, ShieldCheck, Lock, ArrowRight, User, Mail, MapPin, Phone, Loader2 } from 'lucide-react';
 import { useStore } from '../context/StoreContext';
 import { useCart } from '../context/CartContext';
 import { api } from '../api/client';
+const RAZORPAY_KEY_ID = 'rzp_test_TZOUTXc8QvxyyU';
 
 export default function CheckoutModal() {
   const { isCheckoutOpen, setIsCheckoutOpen, setCompletedOrder } = useStore();
@@ -11,6 +12,17 @@ export default function CheckoutModal() {
   const [step, setStep] = useState(1);
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState('');
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.src = 'https://checkout.razorpay.com/v1/checkout.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      document.body.removeChild(script);
+    };
+  }, []);
 
   const [formData, setFormData] = useState({
     name: 'Jane Doe',
@@ -55,20 +67,96 @@ export default function CheckoutModal() {
         total: grandTotal
       },
       payment: {
-        method: formData.paymentMethod,
-        status: "Paid"
+        method: 'Razorpay',
+        status: 'Pending'
       }
     };
 
     try {
-      const res = await api.createOrder(orderPayload);
-      if (res.success) {
-        setCompletedOrder(res.data);
-        clearCart();
-        setIsCheckoutOpen(false);
-      } else {
-        setError(res.message || 'Failed to place order.');
+      const paymentOrderRes = await fetch('/api/payment/create-order', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          amount: grandTotal
+        })
+      });
+
+      const paymentOrder = await paymentOrderRes.json();
+
+      if (!paymentOrder.success) {
+        throw new Error(paymentOrder.message || 'Unable to start payment');
       }
+
+      console.log('Razorpay Order Created:', paymentOrder.data.orderId);
+      const options = {
+        key: RAZORPAY_KEY_ID,
+        amount: paymentOrder.data.amount,
+        currency: paymentOrder.data.currency,
+        name: 'Nexus E-Commerce Store',
+        description: 'Nexus Store Purchase',
+        order_id: paymentOrder.data.orderId,
+
+        handler: async function (response) {
+          try {
+            const verifyRes = await api.verifyPayment({
+              razorpay_order_id: response.razorpay_order_id,
+              razorpay_payment_id: response.razorpay_payment_id,
+              razorpay_signature: response.razorpay_signature
+            });
+
+            if (!verifyRes.success) {
+              setError('Payment verification failed.');
+              return;
+            }
+
+            const finalOrderPayload = {
+              ...orderPayload,
+              payment: {
+                method: 'Razorpay',
+                status: 'Paid',
+                razorpayOrderId: response.razorpay_order_id,
+                razorpayPaymentId: response.razorpay_payment_id
+              }
+            };
+
+            const orderRes = await api.createOrder(finalOrderPayload);
+
+            if (orderRes.success) {
+              setCompletedOrder(orderRes.data);
+              clearCart();
+              setIsCheckoutOpen(false);
+            } else {
+              setError(orderRes.message || 'Failed to create order.');
+            }
+
+          } catch (err) {
+            console.error('Payment verification error:', err);
+            setError('Payment was completed, but order verification failed.');
+          }
+        },
+
+        modal: {
+          ondismiss: function () {
+            setSubmitting(false);
+            setError('Payment cancelled.');
+          }
+        },
+
+        prefill: {
+          name: formData.name,
+          email: formData.email,
+          contact: formData.phone
+        },
+
+        theme: {
+          color: '#38bdf8'
+        }
+      };
+
+      const razorpay = new window.Razorpay(options);
+      razorpay.open();
     } catch (err) {
       console.error("Checkout submit error:", err);
       setError("Server connection failed. Placed order offline fallback.");
@@ -92,8 +180,8 @@ export default function CheckoutModal() {
 
   return (
     <div className="modal-overlay" onClick={() => setIsCheckoutOpen(false)}>
-      <div 
-        className="glass-card" 
+      <div
+        className="glass-card responsive-modal responsive-modal-padded"
         onClick={(e) => e.stopPropagation()}
         style={{
           width: '100%',
@@ -197,7 +285,7 @@ export default function CheckoutModal() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
               <div>
                 <label style={{ fontSize: '0.85rem', color: 'var(--text-secondary)', marginBottom: '0.5rem', display: 'block' }}>Select Payment Gateway</label>
-                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '0.75rem' }}>
+                <div className="checkout-payment-options" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gap: '0.75rem' }}>
                   {['Credit Card', 'PayPal', 'UPI / QR'].map(method => (
                     <button
                       key={method}
